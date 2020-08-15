@@ -11,3 +11,7 @@ end
 def panagram?(string)
     ('a'..'z').all? { |x| string.downcase.include? (x) } 
 end
+
+def is_isogram(string)
+    string.downcase.chars.uniq == string.downcase.chars
+end
