@@ -20,10 +20,18 @@ def longest_repetition chars
     return a_ind.concat(num)
 end
 
-require 'set'
+
 def panagram?(string)
-  pp string
   arr = string.downcase.chars
   b = ['a','b','c','d','e','f','g','h','i','j','k', 'l', 'm','n','o','p','q','r','s','t','u','v','w','x','y','z']
-  return b.all? {|smaller_array_item| arr.include?(smaller_array_item)}
+  return b.all? {|aplha| arr.include?(aplha)}
+end
+
+def is_isogram(string)
+    arr = string.downcase.chars
+    count_a = []
+     arr.each do |s|
+      count_a.push(arr.count(s))
+     end
+    count_a.all? {|c| c==1}
 end
