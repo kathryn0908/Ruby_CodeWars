@@ -43,3 +43,9 @@ def to_camel_case(str)
     pp up_a.join('')
 end
 to_camel_case(str)
+
+require 'prime'
+
+def isPrime(num)
+  num.prime?
+end
