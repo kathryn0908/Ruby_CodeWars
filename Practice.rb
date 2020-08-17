@@ -35,3 +35,21 @@ def is_isogram(string)
      end
     count_a.all? {|c| c==1}
 end
+
+def DNA_strand(dna)
+    dna_a = dna.chars.map do |d|
+      d == "A" ? d.replace("T") 
+      : d == "T" ? d.replace("A") 
+      : d == "G" ? d.replace("C") 
+      : d == "C" ? d.replace("G")
+      : null 
+    end
+    
+    return dna_a.join('')
+    
+end
+
+require 'prime'# Test if number is prime
+def isPrime(num)
+  Prime.prime?(num)
+end
